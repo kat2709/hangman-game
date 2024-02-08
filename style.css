@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.page {
+  background: rgb(252, 248, 254);
+  background: linear-gradient(
+    0deg,
+    rgba(252, 248, 254, 0.4010854341736695) 0%,
+    rgba(192, 203, 230, 0.3534663865546218) 100%
+  );
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid black;
+  border-radius: 40px;
+  padding: 40px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.gallows-part {
+  width: 300px;
+}
+
+.gallows {
+  position: relative;
+  background-image: url(./assets/gallows.svg);
+  width: 260px;
+  height: 480px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.head {
+  position: absolute;
+  background-image: url(./assets/head.svg);
+  width: 71px;
+  height: 70px;
+  top: 109px;
+  right: 1px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.corpus {
+  position: absolute;
+  background-image: url(./assets/corpus.svg);
+  width: 5px;
+  height: 116px;
+  top: 179px;
+  right: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.left-arm {
+  position: absolute;
+  background-image: url(./assets/left_arm_leg.svg);
+  width: 68px;
+  height: 68px;
+  top: 202px;
+  right: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.right-arm {
+  position: absolute;
+  background-image: url(./assets/right_arm_leg.svg);
+  width: 68px;
+  height: 68px;
+  top: 202px;
+  right: -29px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.left-leg {
+  position: absolute;
+  background-image: url(./assets/left_arm_leg.svg);
+  width: 68px;
+  height: 68px;
+  top: 292px;
+  right: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.right-leg {
+  position: absolute;
+  background-image: url(./assets/right_arm_leg.svg);
+  width: 68px;
+  height: 68px;
+  top: 292px;
+  right: -29px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.hide-body-part {
+  opacity: 0;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  width: 260px;
+}
+
+/* quiz-part section */
+.quiz-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.secret-word {
+  display: flex;
+  justify-content: center;
+}
+
+.cell {
+  font-size: 20px;
+  margin: 0px 5px;
+  width: 15px;
+  height: 25px;
+  border-bottom: 2px solid black;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.open-cell {
+  border: none;
+}
+
+.question {
+  margin-top: 40px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.incorrect-attempts {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.count-span {
+  color: red;
+}
+
+.keyboard {
+  margin-top: 50px;
+  width: 455px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.square {
+  margin: 3px;
+  max-width: 40px;
+  width: 100%;
+  height: 40px;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(165, 180, 198, 1) 100%
+  );
+  outline: 2px solid #9aa5b3;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.used-square {
+  opacity: 0.8;
+  color: rgb(189, 185, 185);
+  pointer-events: none;
+}
+
+.finish-game {
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 275px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  padding: 30px;
+  background-color: rgb(243 246 255);
+}
+
+h3 {
+  margin-top: 40px;
+}
+
+.play-btn {
+  margin-top: 60px;
+  width: 130px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #8f91a4;
+  border: 3px solid #676565;
+  animation: blink 1s linear infinite;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@keyframes blink {
+  0% {
+    color: rgb(42, 255, 63);
+  }
+  50% {
+    color: rgb(198, 220, 35);
+  }
+  100% {
+    color: rgb(42, 255, 63);
+  }
+}
+
+@media (max-width: 850px) {
+  .gallows {
+    margin-top: 15px;
+    width: 154px;
+    height: 250px;
+  }
+
+  .head{
+    width: 50px;
+    height: 50px;
+    top: 64px;
+    right: 0px;
+  }
+
+  .corpus{
+    height: 90px;
+    top: 111px;
+    right: 22px;
+  }
+
+  .gallows-part {
+    width: 200px;
+  }
+
+  .left-arm{
+    width: 50px;
+    height: 50px;
+    top: 125px;
+    right: 16px;
+  }
+
+  .right-arm{
+    width: 50px;
+    height: 50px;
+    top: 125px;
+    right: -24px;
+  }
+
+  .left-leg{
+    width: 50px;
+    height: 50px;
+    top: 194px;
+    right: 16px;
+  }
+
+  .right-leg{
+    width: 50px;
+    height: 50px;
+    top: 194px;
+    right: -23px;
+  }
+
+  h1 {
+    margin-top: 20px;
+    font-size: 20px;
+    width: 180px;
+  }
+}
+
+@media (max-width: 800px) {
+  body{
+    padding: 20px 20px;
+    display: block;
+  }
+  
+  .page {
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+  }
+
+  .gallows-part {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .square {
+    width: 30px;
+    height: 30px;
+  }
+
+  h1 {
+    margin-top: 0px;
+  }
+
+  .keyboard {
+    margin-top: 15px;
+    width: 350px;
+  }
+
+  .secret-word {
+    margin-top: 15px;
+  }
+
+  .question {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 420px) {
+  .square {
+    width: 25px;
+    height: 25px;
+  }
+
+  .keyboard {
+    width: 300px;
+  }
+
+  .question {
+    width: 300px;
+  }
+}
