@@ -222,7 +222,7 @@ function resultGameWindow() {
     count = 0;
     countLetter = 0;
     gallows();
-    if (randomNumber === questionnaire.length-1) {
+    if (randomNumber === questionnaire.length - 1) {
       randomNumber = 0;
       generateQustion();
     } else {
@@ -259,21 +259,33 @@ function gallows() {
   const rightLeg = document.querySelector(".right-leg");
   if (count === 1) {
     head.classList.remove("hide-body-part");
+    removeAllState()
+    head.classList.add("first-state");
   }
   if (count === 2) {
     corpus.classList.remove("hide-body-part");
+    removeAllState()
+    head.classList.add("second-state");
   }
   if (count === 3) {
     leftArm.classList.remove("hide-body-part");
+    removeAllState()
+    head.classList.add("third-state");
   }
   if (count === 4) {
     rightArm.classList.remove("hide-body-part");
+    removeAllState()
+    head.classList.add("fourth-state");
   }
   if (count === 5) {
     leftLeg.classList.remove("hide-body-part");
+    removeAllState()
+    head.classList.add("fifth-state");
   }
   if (count === 6) {
     rightLeg.classList.remove("hide-body-part");
+    removeAllState()
+    head.classList.add("sixth-state");
     keyboardSquares.forEach((btn) =>
       btn.removeEventListener("click", virtualKeyboard)
     );
@@ -284,6 +296,7 @@ function gallows() {
     }, "500");
   }
   if (count === 0) {
+    removeAllState()
     head.classList.add("hide-body-part");
     corpus.classList.add("hide-body-part");
     corpus.classList.add("hide-body-part");
@@ -319,6 +332,9 @@ function physicalKeyboards(e) {
       squareCurrent.classList.add("used-square");
       countLetter++;
       if (countLetter === currentAnswer.length) {
+        removeAllState()
+        const head = document.querySelector(".head");
+        head.classList.add("happy");
         resultGame = "You win!";
         keyboardSquares.forEach((btn) =>
           btn.removeEventListener("click", virtualKeyboard)
@@ -354,6 +370,9 @@ function virtualKeyboard(e) {
       openCell.classList.add("open-cell");
       countLetter++;
       if (countLetter === currentAnswer.length) {
+        removeAllState()
+        const head = document.querySelector(".head");
+        head.classList.add("happy");
         resultGame = "You win!";
         keyboardSquares.forEach((btn) =>
           btn.removeEventListener("click", virtualKeyboard)
@@ -380,3 +399,15 @@ document.addEventListener("keydown", physicalKeyboards);
 keyboardSquares.forEach((btn) =>
   btn.addEventListener("click", virtualKeyboard)
 );
+
+
+function removeAllState(){
+  const head=document.querySelector(".head")
+  head.classList.remove("first-state");
+  head.classList.remove("second-state");
+  head.classList.remove("third-state");
+  head.classList.remove("fourth-state");
+  head.classList.remove("fifth-state");
+  head.classList.remove("sixth-state");
+  head.classList.remove("happy");
+}

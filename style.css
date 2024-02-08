@@ -49,7 +49,6 @@ body {
 
 .head {
   position: absolute;
-  background-image: url(./assets/head_1.svg);
   width: 71px;
   height: 70px;
   top: 109px;
@@ -57,7 +56,35 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 1;
-  transition: opacity 1s;
+  transition: linear 0.2s;
+}
+
+.first-state{
+  background-image: url(./assets/head_1.svg);
+}
+
+.second-state{
+  background-image: url(./assets/head_2.svg);
+}
+
+.third-state{
+  background-image: url(./assets/head_3.svg);
+}
+
+.fourth-state{
+  background-image: url(./assets/head_4.svg);
+}
+
+.fifth-state{
+  background-image: url(./assets/head_5.svg);
+}
+
+.sixth-state{
+  background-image: url(./assets/head_6.svg);
+}
+
+.happy{
+  background-image: url(./assets/head_happy.svg);
 }
 
 .corpus {
