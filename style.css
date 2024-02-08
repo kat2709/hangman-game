@@ -97,7 +97,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 0.4s;
 }
 
 .left-arm {
@@ -110,7 +110,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 0.3s;
 }
 
 .right-arm {
@@ -123,7 +123,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 0.3s;
 }
 
 .left-leg {
@@ -136,7 +136,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 0.5s;
 }
 
 .right-leg {
@@ -149,7 +149,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity 0.5s;
 }
 
 .hide-body-part {
