@@ -49,6 +49,7 @@ body {
 
 .head {
   position: absolute;
+  z-index: 10;
   width: 71px;
   height: 70px;
   top: 109px;
@@ -59,36 +60,37 @@ body {
   transition: linear 0.2s;
 }
 
-.first-state{
+.first-state {
   background-image: url(./assets/head_1.svg);
 }
 
-.second-state{
+.second-state {
   background-image: url(./assets/head_2.svg);
 }
 
-.third-state{
+.third-state {
   background-image: url(./assets/head_3.svg);
 }
 
-.fourth-state{
+.fourth-state {
   background-image: url(./assets/head_4.svg);
 }
 
-.fifth-state{
+.fifth-state {
   background-image: url(./assets/head_5.svg);
 }
 
-.sixth-state{
+.sixth-state {
   background-image: url(./assets/head_6.svg);
 }
 
-.happy{
+.happy {
   background-image: url(./assets/head_happy.svg);
 }
 
 .corpus {
   position: absolute;
+  z-index: 1;
   background-image: url(./assets/corpus.svg);
   width: 5px;
   height: 116px;
@@ -296,14 +298,14 @@ h3 {
     height: 250px;
   }
 
-  .head{
+  .head {
     width: 50px;
     height: 50px;
     top: 64px;
     right: 0px;
   }
 
-  .corpus{
+  .corpus {
     height: 90px;
     top: 111px;
     right: 22px;
@@ -313,28 +315,28 @@ h3 {
     width: 200px;
   }
 
-  .left-arm{
+  .left-arm {
     width: 50px;
     height: 50px;
     top: 125px;
     right: 16px;
   }
 
-  .right-arm{
+  .right-arm {
     width: 50px;
     height: 50px;
     top: 125px;
     right: -24px;
   }
 
-  .left-leg{
+  .left-leg {
     width: 50px;
     height: 50px;
     top: 194px;
     right: 16px;
   }
 
-  .right-leg{
+  .right-leg {
     width: 50px;
     height: 50px;
     top: 194px;
@@ -349,11 +351,11 @@ h3 {
 }
 
 @media (max-width: 800px) {
-  body{
+  body {
     padding: 20px 20px;
     display: block;
   }
-  
+
   .page {
     flex-direction: column;
     padding: 15px;
