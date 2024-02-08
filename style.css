@@ -239,6 +239,17 @@ h1 {
   text-transform: uppercase;
 }
 
+@media (hover: hover) {
+  .square:hover {
+    background: rgb(130, 181, 198);
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 1) 0%,
+      rgb(23, 57, 97) 100%
+    );
+  }
+}
+
 .used-square {
   opacity: 0.8;
   color: rgb(189, 185, 185);
