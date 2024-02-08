@@ -48,6 +48,8 @@ body {
 }
 
 .head {
+  background-color: orange;
+  border-radius: 100px;
   position: absolute;
   z-index: 10;
   width: 71px;
@@ -57,7 +59,6 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 1;
-  background-image: url(./assets/head_1.svg);
   transition: linear 0.2s;
 }
 
